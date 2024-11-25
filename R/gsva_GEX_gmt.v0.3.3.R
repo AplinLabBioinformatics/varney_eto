@@ -61,7 +61,7 @@ ntcts2check <- read.table(args$exprMat, sep = "\t", header = T, row.names = 1, c
 
 storeNames <- data.frame(inNames = colnames(ntcts2), origNames = colnames(ntcts2check), row.names = colnames(ntcts2))
 
-gmtIn <- GSEABase::getGmt(args$gmtFile)
+gmtIn <- getGmt(args$gmtFile)
 
 gsvaOutT <- gsva(as.matrix(ntcts2), gmtIn)
 
